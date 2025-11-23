@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MikroTik Script Archive</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+        <div class="sidebar">
+            <div class="search-box">
+                <input type="text" id="searchInput" onkeyup="filterScripts()" placeholder="Search scripts...">
+            </div>
+            <ul class="nav-list" id="navList">
+                <li class="nav-item"><a href="scripts/anti-hack-protected-bootloader.html" >Anti Hack Protected BootLoader</a></li><li class="nav-item"><a href="scripts/auto-fix-sntp-and-clock-for-indonesia-timezone.html" >Auto Fix SNTP and Clock for Indonesia Timezone</a></li><li class="nav-item"><a href="scripts/auto-simple-queue-from-dhcp-server.html" >Auto Simple Queue From DHCP Server</a></li><li class="nav-item"><a href="scripts/auto-connect-to-internet-with-dhcp-client.html" >Auto Connect to Internet With DHCP Client</a></li><li class="nav-item"><a href="scripts/auto-repair-passthrough-in-mangle.html" >Auto Repair Passthrough In Mangle</a></li><li class="nav-item"><a href="scripts/auto-backup-filename-backup-and-send-to-gmail.html" >Auto Backup Filename.backup and Send To Gmail</a></li><li class="nav-item"><a href="scripts/auto-backup-filename-rsc-and-send-to-gmail.html" >Auto Backup Filename.rsc and Send To Gmail</a></li><li class="nav-item"><a href="scripts/automated-usage-script-without-user-manager.html" >Automated Usage Script Without User Manager</a></li><li class="nav-item"><a href="scripts/allow-use-of-ntp-org-pool-service-for-ntp.html" >Allow Use Of ntp.org Pool Service For NTP</a></li><li class="nav-item"><a href="scripts/auto-upgrade-script-v3-x.html" >Auto upgrade script V3.x</a></li><li class="nav-item"><a href="scripts/audible-signal-test.html" >Audible Signal Test</a></li><li class="nav-item"><a href="scripts/a-bit-of-sounds.html" >A Bit of Sounds</a></li><li class="nav-item"><a href="scripts/add-a-data-limit-to-trial-hotspot-users.html" >Add a Data Limit To Trial Hotspot Users</a></li><li class="nav-item"><a href="scripts/auto-update-routeros-package-from-script.html" >Auto Update RouterOS Package From Script</a></li><li class="nav-item"><a href="scripts/arp-table-to-dynamic-simple-queue.html" >ARP Table To Dynamic Simple Queue</a></li><li class="nav-item"><a href="scripts/add-static-dhcp-leases-to-arp-list.html" >Add Static DHCP Leases to ARP List</a></li><li class="nav-item"><a href="scripts/alignment-script-that-reads-back-rssi-with-beeps.html" >Alignment Script that "reads back" RSSI with Beeps</a></li><li class="nav-item"><a href="scripts/bootloader-protector.html" >Bootloader Protector</a></li><li class="nav-item"><a href="scripts/block-sites-with-keywords-use-dns-cache.html" >Block Sites With Keywords Use Dns Cache</a></li><li class="nav-item"><a href="scripts/block-website-with-keywords-use-dns-static.html" >Block Website With Keywords Use DNS Static</a></li><li class="nav-item"><a href="scripts/bypass-full-speed-locat-transfer-file.html" >Bypass Full Speed Locat Transfer File</a></li><li class="nav-item"><a href="scripts/backup-mikrotik-file-backup.html" >Backup Mikrotik File .Backup</a></li><li class="nav-item"><a href="scripts/backup-export-file-rsc.html" >Backup Export File .rsc</a></li><li class="nav-item"><a href="scripts/backup-export-file-rsc-hide-sensitive.html" >Backup Export File .rsc Hide-Sensitive</a></li><li class="nav-item"><a href="scripts/backup-export-file-rsc-compact.html" >Backup Export File .rsc Compact</a></li><li class="nav-item"><a href="scripts/backup-export-file-rsc-terse.html" >Backup Export File .rsc Terse</a></li><li class="nav-item"><a href="scripts/backup-export-file-rsc-verbose.html" >Backup Export File .rsc Verbose</a></li><li class="nav-item"><a href="scripts/backup-export-file-rsc-with-combination.html" >Backup Export File .rsc With Combination</a></li><li class="nav-item"><a href="scripts/backup-import-file-rsc.html" >Backup Import File .rsc</a></li><li class="nav-item"><a href="scripts/bypass-local-connection-local-ip.html" >Bypass Local Connection / Local IP</a></li><li class="nav-item"><a href="scripts/bypass-hotspot-user-with-mac-address.html" >Bypass Hotspot User With Mac-Address</a></li><li class="nav-item"><a href="scripts/blocking-access-to-specific-websites.html" >Blocking Access To Specific Websites</a></li><li class="nav-item"><a href="scripts/bittorrent-torrentwws-torrentwww-layer-7.html" >Bittorrent, Torrentwws, Torrentwww Layer-7</a></li><li class="nav-item"><a href="scripts/block-windows-update.html" >Block Windows Update</a></li><li class="nav-item"><a href="scripts/block-youtube-with-layer-7-or-content-or-tls.html" >Block Youtube with "Layer 7" or "Content" Or "TLS"</a></li><li class="nav-item"><a href="scripts/block-whatsapp-with-layer-7-or-content-or-tls.html" >Block Whatsapp with "Layer 7" or "Content" Or "TLS"</a></li><li class="nav-item"><a href="scripts/block-facebook-with-layer-7-or-content-or-tls.html" >Block Facebook with "Layer 7" or "Content" Or "TLS"</a></li><li class="nav-item"><a href="scripts/block-instagram-with-layer-7-or-content-or-tls.html" >Block Instagram with "Layer 7" or "Content" Or "TLS"</a></li><li class="nav-item"><a href="scripts/block-twitter-with-layer-7-or-content-or-tls.html" >Block Twitter with "Layer 7" or "Content" Or "TLS"</a></li><li class="nav-item"><a href="scripts/block-telegram-with-layer-7-or-content-or-tls.html" >Block Telegram with "Layer 7" or "Content" Or "TLS"</a></li><li class="nav-item"><a href="scripts/block-signal-with-layer-7-or-content-or-tls.html" >Block Signal with "Layer 7" or "Content" Or "TLS"</a></li><li class="nav-item"><a href="scripts/block-bigo-with-layer-7-or-content-or-tls.html" >Block Bigo with "Layer 7" or "Content" Or "TLS"</a></li><li class="nav-item"><a href="scripts/block-netflix-with-layer-7-or-content-or-tls.html" >Block Netflix with "Layer 7" or "Content" Or "TLS"</a></li><li class="nav-item"><a href="scripts/block-iflix-with-layer-7-or-content-or-tls.html" >Block iflix with "Layer 7" or "Content" Or "TLS"</a></li><li class="nav-item"><a href="scripts/block-tracert-traceroute.html" >Block Tracert / Traceroute</a></li><li class="nav-item"><a href="scripts/block-tiktok-firewall-rules-tls.html" >Block TikTok Firewall Rules "TLS"</a></li><li class="nav-item"><a href="scripts/block-tiktok-firewall-rules-content.html" >Block TikTok Firewall Rules "Content"</a></li><li class="nav-item"><a href="scripts/block-tiktok-firewall-rules-layer-7.html" >Block TikTok Firewall Rules "Layer-7"</a></li><li class="nav-item"><a href="scripts/bank-indonesia-domain-list.html" >Bank Indonesia Domain List</a></li><li class="nav-item"><a href="scripts/block-mac-address-device.html" >Block MAC Address Device</a></li><li class="nav-item"><a href="scripts/blocking-modem-access.html" >Blocking Modem Access</a></li><li class="nav-item"><a href="scripts/backup-graphing-data.html" >Backup Graphing Data</a></li><li class="nav-item"><a href="scripts/basic-universal-firewall-script.html" >Basic universal firewall script</a></li><li class="nav-item"><a href="scripts/block-download-based-download-sizes.html" >Block Download Based Download Sizes</a></li><li class="nav-item"><a href="scripts/basic-traffic-priorities-rev-3-1.html" >Basic Traffic Priorities Rev 3.1</a></li><li class="nav-item"><a href="scripts/block-higgs-domino-firewall-tls-method.html" >Block Higgs Domino Firewall TLS Method</a></li><li class="nav-item"><a href="scripts/backup-full-to-ftp.html" >Backup Full to FTP</a></li><li class="nav-item"><a href="scripts/change-mac-address-from-terminal.html" >Change MAC Address From Terminal</a></li><li class="nav-item"><a href="scripts/change-all-queue-type-in-queue-simple.html" >Change all Queue type in Queue Simple</a></li><li class="nav-item"><a href="scripts/change-all-queue-type-in-queue-tree.html" >Change all Queue type in Queue Tree</a></li><li class="nav-item"><a href="scripts/checking-for-the-update-new-version.html" >Checking for the Update New Version</a></li><li class="nav-item"><a href="scripts/clear-log-and-session-user-manager.html" >Clear Log and Session User Manager</a></li><li class="nav-item"><a href="scripts/custom-limit-bandwidth-hotspot-with-queue-tree.html" >Custom Limit Bandwidth Hotspot With Queue Tree</a></li><li class="nav-item"><a href="scripts/custom-limit-bandwidth-hotspot-with-queue-simple.html" >Custom Limit Bandwidth Hotspot With Queue Simple</a></li><li class="nav-item"><a href="scripts/complete-bandwidth-monitoring.html" >Complete Bandwidth Monitoring</a></li><li class="nav-item"><a href="scripts/create-multiple-queue-tree-at-once.html" >Create Multiple Queue Tree At Once</a></li><li class="nav-item"><a href="scripts/create-multiple-simple-queue-at-once.html" >Create Multiple Simple Queue At Once</a></li><li class="nav-item"><a href="scripts/create-hotspot-multi-login-with-bandwidth-limit.html" >Create Hotspot Multi Login With Bandwidth Limit</a></li><li class="nav-item"><a href="scripts/check-if-rto-and-send-to-telegram.html" >Check if RTO and send to Telegram</a></li><li class="nav-item"><a href="scripts/change-all-address-list-dynamic-to-static.html" >Change All Address List Dynamic To Static</a></li><li class="nav-item"><a href="scripts/change-system-note.html" >Change System Note</a></li><li class="nav-item"><a href="scripts/complete-mangle-speedtest-with-layer-7.html" >Complete Mangle Speedtest with Layer-7</a></li><li class="nav-item"><a href="scripts/calculates-day-of-the-week-for-a-givien-date.html" >Calculates Day Of The Week For a Givien Date</a></li><li class="nav-item"><a href="scripts/change-name-interface-or-ether-to-default-auto.html" >Change Name Interface or Ether To Default Auto</a></li><li class="nav-item"><a href="scripts/change-name-interface-or-ether-to-default-manual.html" >Change Name Interface or Ether To Default Manual</a></li><li class="nav-item"><a href="scripts/check-if-ip-on-interface-have-changed.html" >Check if IP on interface have changed</a></li><li class="nav-item"><a href="scripts/check-bandwidth-and-add-limitations.html" >Check Bandwidth and Add Limitations</a></li><li class="nav-item"><a href="scripts/calculate-with-decimal-numbers.html" >Calculate With Decimal Numbers</a></li><li class="nav-item"><a href="scripts/clear-log-info-from-terminal.html" >Clear LOG info from Terminal</a></li><li class="nav-item"><a href="scripts/create-a-file.html" >Create A File</a></li><li class="nav-item"><a href="scripts/calea-perl-trafr.html" >Calea Perl Trafr</a></li><li class="nav-item"><a href="scripts/converting-gateway-from-routing-to-hexadecimal.html" >Converting Gateway From Routing To hexadecimal</a></li><li class="nav-item"><a href="scripts/change-mikrotik-identity-or-winbox-caption.html" >Change Mikrotik identity or Winbox Caption</a></li><li class="nav-item"><a href="scripts/change-all-queue-type-in-interface-queue.html" >Change All Queue Type in Interface Queue</a></li><li class="nav-item"><a href="scripts/check-routeros-update-and-notification-to-email-or-telegram.html" >Check RouterOS Update and Notification to eMail or Telegram</a></li><li class="nav-item"><a href="scripts/create-simple-queue-from-pppoe-secret.html" >Create Simple QUEUE from PPPoE Secret</a></li><li class="nav-item"><a href="scripts/disable-interface-based-on-volume-of-data.html" >Disable Interface based on volume of data</a></li><li class="nav-item"><a href="scripts/detect-ip-address-on-vpn-tunnel-if-has-been-changed.html" >Detect IP Address on VPN Tunnel if has been changed</a></li><li class="nav-item"><a href="scripts/dns-static-adblock-for-block-ads.html" >DNS Static adblock For Block Ads</a></li><li class="nav-item"><a href="scripts/dual-wan-dhcp-only-failover.html" >Dual WAN DHCP-only failover</a></li><li class="nav-item"><a href="scripts/dns-over-https-doh.html" >DNS-over-HTTPS (DoH)</a></li><li class="nav-item"><a href="scripts/dynamic-dns-on-private-dns-server.html" >Dynamic DNS on Private DNS Server</a></li><li class="nav-item"><a href="scripts/dynamic-dns-update-script-for-changeip-com.html" >Dynamic DNS Update Script for ChangeIP.com</a></li><li class="nav-item"><a href="scripts/dynamic-dns-update-script-for-changeip-behind-nat.html" >Dynamic DNS Update Script for ChangeIP behind NAT</a></li><li class="nav-item"><a href="scripts/dynamic-dns-update-script-for-dnsomatic-com.html" >Dynamic DNS Update Script for DNSoMatic.com</a></li><li class="nav-item"><a href="scripts/dynamic-dns-update-script-for-dnsomatic-com-behind-nat.html" >Dynamic DNS Update Script for DNSoMatic.com behind NAT</a></li><li class="nav-item"><a href="scripts/dynamic-dns-update-script-for-dyndns.html" >Dynamic DNS Update Script for dynDNS</a></li><li class="nav-item"><a href="scripts/dynamic-dns-update-script-for-dyndns-behind-nat.html" >Dynamic DNS Update Script for dynDNS behind NAT</a></li><li class="nav-item"><a href="scripts/dynamic-dns-update-script-for-everydns.html" >Dynamic DNS Update Script for EveryDNS</a></li><li class="nav-item"><a href="scripts/dynamic-dns-update-script-for-hurricane-electric-dns.html" >Dynamic DNS Update Script for Hurricane Electric DNS</a></li><li class="nav-item"><a href="scripts/dynamic-dns-update-script-for-namecheap.html" >Dynamic DNS Update Script for Namecheap</a></li><li class="nav-item"><a href="scripts/dynamic-dns-update-script-for-no-ip-dns.html" >Dynamic DNS Update Script for No-IP DNS</a></li><li class="nav-item"><a href="scripts/delete-arp-trafic-for-arp-table.html" >Delete Arp Trafic For Arp Table</a></li><li class="nav-item"><a href="scripts/default-filter-rules.html" >Default Filter Rules</a></li><li class="nav-item"><a href="scripts/dnscrypt-with-opendns-port-443-or-5353.html" >DNSCRYPT with OpenDNS port 443 or 5353</a></li><li class="nav-item"><a href="scripts/dns-cache-flush.html" >DNS Cache Flush</a></li><li class="nav-item"><a href="scripts/detect-new-log-entry.html" >Detect New Log Entry</a></li><li class="nav-item"><a href="scripts/dial-pppoe-until-a-certain-ip-range-is-obtained.html" >Dial PPPoE until a Certain IP Range is Obtained</a></li><li class="nav-item"><a href="scripts/discover-unknown-dhcp-server-on-the-network-telegram.html" >Discover Unknown DHCP Server On The Network (Telegram)</a></li><li class="nav-item"><a href="scripts/extract-the-day-of-the-month.html" >Extract The Day Of The Month</a></li><li class="nav-item"><a href="scripts/expired-hotspot-page-without-a-proxy.html" >Expired Hotspot Page Without A Proxy</a></li><li class="nav-item"><a href="scripts/enable-or-disable-new-guest-user-account-daily-hotspot.html" >Enable or Disable New Guest User Account Daily Hotspot</a></li><li class="nav-item"><a href="scripts/expire-users-hotspot-a-after-number-of-days.html" >Expire Users Hotspot A After Number Of Days</a></li><li class="nav-item"><a href="scripts/fasttrack-enable.html" >Fasttrack Enable</a></li><li class="nav-item"><a href="scripts/filter-a-command-output.html" >Filter A Command Output</a></li><li class="nav-item"><a href="scripts/find-the-day-of-the-week.html" >Find The Day Of The Week</a></li><li class="nav-item"><a href="scripts/forget-or-show-user-manager-password.html" >Forget or Show User Manager Password</a></li><li class="nav-item"><a href="scripts/failover-with-netwatch.html" >Failover with Netwatch</a></li><li class="nav-item"><a href="scripts/failover-with-scripting.html" >Failover With Scripting</a></li><li class="nav-item"><a href="scripts/force-disconnect-wireless-stations-with-low-ccq.html" >Force Disconnect Wireless Stations with Low CCQ</a></li><li class="nav-item"><a href="scripts/gps-text-file-converter-to-google-earth-or-maps.html" >GPS Text File Converter To Google Earth Or Maps</a></li><li class="nav-item"><a href="scripts/google-domain-list-or-all-google-host.html" >Google Domain List Or All Google Host</a></li><li class="nav-item"><a href="scripts/get-active-vpn-connections-via-e-mail.html" >Get Active Vpn Connections Via E-Mail</a></li><li class="nav-item"><a href="scripts/google-safe-search-use-dns-static.html" >Google Safe Search use DNS Static</a></li><li class="nav-item"><a href="scripts/get-today-s-date-info.html" >Get Today's Date Info</a></li><li class="nav-item"><a href="scripts/generate-backup-and-send-it-by-e-mail.html" >Generate Backup And Send it By E-Mail</a></li><li class="nav-item"><a href="scripts/get-ip-address-list-netflix-with-raw.html" >Get IP Address List Netflix With RAW</a></li><li class="nav-item"><a href="scripts/how-to-blocked-meris-botnet.html" >How To Blocked Meris Botnet</a></li><li class="nav-item"><a href="scripts/how-to-disable-google-ssl-using-static-dns.html" >How To Disable Google Ssl Using Static Dns</a></li><li class="nav-item"><a href="scripts/host-or-domain-list-speedtest.html" >Host or Domain list SpeedTest</a></li><li class="nav-item"><a href="scripts/hotspot-auto-logout-user-when-inet-down.html" >Hotspot Auto logout user When Inet down</a></li><li class="nav-item"><a href="scripts/how-to-change-path-database-user-manager-to-disk-or-usb.html" >How To Change Path DataBase User Manager to Disk or USB</a></li><li class="nav-item"><a href="scripts/hurricane-electric-ipv6-tunnel-ipv4-endpoint-updater.html" >Hurricane Electric IPv6 Tunnel - IPv4 Endpoint updater</a></li><li class="nav-item"><a href="scripts/how-to-setting-bonding-interface.html" >How to Setting Bonding Interface</a></li><li class="nav-item"><a href="scripts/ip-pool-statistics.html" >IP Pool Statistics</a></li><li class="nav-item"><a href="scripts/ip-address-list-for-netflix.html" >IP Address List for Netflix</a></li><li class="nav-item"><a href="scripts/ip-address-list-for-tiktok.html" >IP Address List for Tiktok</a></li><li class="nav-item"><a href="scripts/ip-address-list-for-ggc-google-global-cache.html" >IP Address List for GGC Google Global Cache</a></li><li class="nav-item"><a href="scripts/ip-address-list-nice-rsc-iix-or-ixp.html" >IP Address List Nice.rsc IIX or IXP</a></li><li class="nav-item"><a href="scripts/ip-address-list-aws-ec2-amazon.html" >IP Address List AWS EC2 Amazon</a></li><li class="nav-item"><a href="scripts/ip-address-list-speedtest.html" >IP Address list SpeedTest</a></li><li class="nav-item"><a href="scripts/ip-address-list-telegram.html" >IP Address list Telegram</a></li><li class="nav-item"><a href="scripts/ip-address-list-facebook.html" >IP Address list Facebook</a></li><li class="nav-item"><a href="scripts/ip-address-list-twitter.html" >IP Address list Twitter</a></li><li class="nav-item"><a href="scripts/ip-address-list-whatsapp.html" >IP Address list WhatsApp</a></li><li class="nav-item"><a href="scripts/ip-address-list-zoom-meeting.html" >IP Address List Zoom Meeting</a></li><li class="nav-item"><a href="scripts/ip-private-or-ip-local-standard-rfc-1918.html" >IP Private or IP Local Standard RFC 1918</a></li><li class="nav-item"><a href="scripts/ip-address-list-indonesia-ipv4.html" >IP Address List Indonesia IPv4</a></li><li class="nav-item"><a href="scripts/ip-address-list-indonesia-ipv6.html" >IP Address List Indonesia IPv6</a></li><li class="nav-item"><a href="scripts/include-custom-function-in-another-script.html" >Include custom function in another script</a></li><li class="nav-item"><a href="scripts/initiating-the-update-process-new-version.html" >Initiating The Update Process New Version</a></li><li class="nav-item"><a href="scripts/improved-netwatch.html" >Improved Netwatch</a></li><li class="nav-item"><a href="scripts/improved-netwatch-2.html" >Improved Netwatch 2</a></li><li class="nav-item"><a href="scripts/layer-7-regex-for-all-streaming-video.html" >Layer-7 Regex For All Streaming Video</a></li><li class="nav-item"><a href="scripts/layer-7-regex-for-all-social-media-socmed.html" >Layer-7 Regex For All Social Media (Socmed)</a></li><li class="nav-item"><a href="scripts/layer-7-regex-for-all-media-extention.html" >Layer-7 Regex For All Media Extention</a></li><li class="nav-item"><a href="scripts/layer-7-regex-for-all-file-extention.html" >Layer-7 Regex For All File Extention</a></li><li class="nav-item"><a href="scripts/layer-7-regex-for-telkom-ads.html" >Layer-7 Regex For Telkom Ads</a></li><li class="nav-item"><a href="scripts/limit-sharing-hotspot-with-change-ttl.html" >Limit sharing Hotspot with 'Change TTL'</a></li><li class="nav-item"><a href="scripts/lb-pcc-2-line-isp-failover.html" >LB PCC 2 Line ISP Failover</a></li><li class="nav-item"><a href="scripts/lb-pcc-3-line-isp-failover.html" >LB PCC 3 Line ISP Failover</a></li><li class="nav-item"><a href="scripts/lb-pcc-4-line-isp-failover.html" >LB PCC 4 Line ISP Failover</a></li><li class="nav-item"><a href="scripts/lb-pcc-5-line-isp-failover.html" >LB PCC 5 Line ISP Failover</a></li><li class="nav-item"><a href="scripts/lb-pcc-6-line-isp-failover.html" >LB PCC 6 Line ISP Failover</a></li><li class="nav-item"><a href="scripts/lb-ecmp-2-line-isp-failover.html" >LB ECMP 2 Line ISP Failover</a></li><li class="nav-item"><a href="scripts/lb-ecmp-3-line-isp-failover.html" >LB ECMP 3 Line ISP Failover</a></li><li class="nav-item"><a href="scripts/lb-ecmp-4-line-isp-failover.html" >LB ECMP 4 Line ISP Failover</a></li><li class="nav-item"><a href="scripts/lb-ecmp-5-line-isp-failover.html" >LB ECMP 5 Line ISP Failover</a></li><li class="nav-item"><a href="scripts/lb-ecmp-6-line-isp-failover.html" >LB ECMP 6 Line ISP Failover</a></li><li class="nav-item"><a href="scripts/lb-ecmp-failover-script.html" >LB ECMP Failover Script</a></li><li class="nav-item"><a href="scripts/log-parser-event-trigger-script.html" >Log Parser - Event Trigger Script</a></li><li class="nav-item"><a href="scripts/limiting-a-user-to-a-given-amount-of-traffic-using-queues.html" >Limiting A User To A Given Amount Of Traffic Using Queues</a></li><li class="nav-item"><a href="scripts/limiting-a-user-to-a-given-amount-of-traffic-with-user-levels.html" >Limiting a User To a Given Amount Of Traffic With User Levels</a></li><li class="nav-item"><a href="scripts/limit-different-bandwidth-in-day-and-night.html" >Limit Different Bandwidth In Day and Night</a></li><li class="nav-item"><a href="scripts/led-antenna-alignment.html" >LED Antenna Alignment</a></li><li class="nav-item"><a href="scripts/logging-average-ccq-and-wireless-clients-stats.html" >Logging Average CCQ and Wireless Clients Stats</a></li><li class="nav-item"><a href="scripts/logging-snr-and-thruput-values.html" >Logging SNR and Thruput Values</a></li><li class="nav-item"><a href="scripts/make-voip-traffic-a-priority.html" >Make VOIP traffic a priority</a></li><li class="nav-item"><a href="scripts/mikrotik-port-service-api-8728.html" >Mikrotik Port Service API 8728</a></li><li class="nav-item"><a href="scripts/mikrotik-port-service-api-ssl-8729.html" >Mikrotik Port Service API-SSL 8729</a></li><li class="nav-item"><a href="scripts/mikrotik-port-service-ftp-21.html" >Mikrotik Port Service FTP 21</a></li><li class="nav-item"><a href="scripts/mikrotik-port-service-ssh-22.html" >Mikrotik Port Service SSH 22</a></li><li class="nav-item"><a href="scripts/mikrotik-port-service-telnet-23.html" >Mikrotik Port Service TELNET 23</a></li><li class="nav-item"><a href="scripts/mikrotik-port-service-winbox-8291.html" >Mikrotik Port Service WINBOX 8291</a></li><li class="nav-item"><a href="scripts/mikrotik-port-service-www-80-webfig.html" >Mikrotik Port Service WWW 80 (webfig)</a></li><li class="nav-item"><a href="scripts/mikrotik-port-service-www-ssl-443-webfig.html" >Mikrotik Port Service WWW-SSL 443 (webfig)</a></li><li class="nav-item"><a href="scripts/monitoring-script.html" >Monitoring Script</a></li><li class="nav-item"><a href="scripts/mangle-and-port-ultraviewer-remote-dekstop.html" >Mangle and Port UltraViewer (Remote Dekstop)</a></li><li class="nav-item"><a href="scripts/mangle-and-port-teamviewer-remote-dekstop.html" >Mangle and Port TeamViewer (Remote Dekstop)</a></li><li class="nav-item"><a href="scripts/mangle-and-port-anydesk-remote-dekstop.html" >Mangle and Port AnyDesk (Remote Dekstop)</a></li><li class="nav-item"><a href="scripts/mangle-and-port-remote-desktop-connection-rdc.html" >Mangle and Port Remote Desktop Connection (RDC)</a></li><li class="nav-item"><a href="scripts/mangle-and-port-google-chrome-remote-desktop.html" >Mangle and Port Google Chrome Remote Desktop</a></li><li class="nav-item"><a href="scripts/mangle-and-port-net-monitoring-for-employees-pro.html" >Mangle and Port Net Monitoring for employees pro</a></li><li class="nav-item"><a href="scripts/mangle-and-port-vnc-virtual-network-computing.html" >Mangle and Port VNC (Virtual Network Computing</a></li><li class="nav-item"><a href="scripts/make-sure-all-clients-use-router-dns.html" >Make Sure All Clients Use Router Dns</a></li><li class="nav-item"><a href="scripts/make-an-automated-configuration-and-uninstall.html" >Make an Automated Configuration and Uninstall</a></li><li class="nav-item"><a href="scripts/monitor-logs-send-email-alert-or-run-script.html" >Monitor Logs, Send Email Alert Or Run Script</a></li><li class="nav-item"><a href="scripts/no-mark-without-mangle-in-queue-tree.html" >No-Mark Without Mangle in Queue Tree</a></li><li class="nav-item"><a href="scripts/notification-when-public-ip-address-router-changes.html" >Notification When Public IP Address Router Changes</a></li><li class="nav-item"><a href="scripts/notification-of-device-connection-to-the-network.html" >Notification Of Device Connection To The Network</a></li><li class="nav-item"><a href="scripts/netwatch-monitoring-host.html" >Netwatch Monitoring Host</a></li><li class="nav-item"><a href="scripts/only-1-hotspot-id-can-login-together.html" >Only 1 Hotspot Id Can Login Together</a></li><li class="nav-item"><a href="scripts/protect-romon-routeros.html" >Protect RoMON RouterOS</a></li><li class="nav-item"><a href="scripts/print-your-mikrotik-board-type.html" >Print your Mikrotik board type</a></li><li class="nav-item"><a href="scripts/protect-btest-server.html" >Protect Btest Server</a></li><li class="nav-item"><a href="scripts/protect-neighbors-discovery.html" >Protect Neighbors Discovery</a></li><li class="nav-item"><a href="scripts/protect-mac-address-server.html" >Protect Mac Address Server</a></li><li class="nav-item"><a href="scripts/pppoe-secret-random-username-and-password.html" >PPPoE Secret Random Username and Password</a></li><li class="nav-item"><a href="scripts/port-forward-for-all-remote-desktop.html" >Port Forward for All Remote Desktop</a></li><li class="nav-item"><a href="scripts/password-and-username-ont-modem-telkom-indihome.html" >Password and username ONT Modem Telkom Indihome</a></li><li class="nav-item"><a href="scripts/protect-modem-and-webfig-pages-using-internal-proxy.html" >Protect Modem And Webfig Pages Using Internal Proxy</a></li><li class="nav-item"><a href="scripts/pseudo-random-number-generator.html" >Pseudo Random Number Generator</a></li><li class="nav-item"><a href="scripts/ping-icmp-to-routing-isp-games.html" >Ping ICMP To Routing ISP Games</a></li><li class="nav-item"><a href="scripts/port-game-online-for-pc-games.html" >Port Game Online for PC Games</a></li><li class="nav-item"><a href="scripts/port-game-online-for-mobile-games.html" >Port Game Online for Mobile Games</a></li><li class="nav-item"><a href="scripts/port-game-online-for-web-games.html" >Port Game Online for Web Games</a></li><li class="nav-item"><a href="scripts/protect-router-from-port-scanner.html" >Protect Router from Port Scanner</a></li><li class="nav-item"><a href="scripts/protect-connection-with-anti-netcut.html" >Protect Connection With ANTI NETCUT</a></li><li class="nav-item"><a href="scripts/protect-open-web-proxy.html" >Protect Open Web proxy</a></li><li class="nav-item"><a href="scripts/protect-open-recursive-dns.html" >Protect Open Recursive DNS</a></li><li class="nav-item"><a href="scripts/protect-default-port-service-from-wan.html" >Protect Default Port Service From WAN</a></li><li class="nav-item"><a href="scripts/protect-router-from-ddos-attacks.html" >Protect Router From DDOS Attacks</a></li><li class="nav-item"><a href="scripts/protect-router-from-exploit-vulnerability.html" >Protect Router From Exploit (VULNERABILITY)</a></li><li class="nav-item"><a href="scripts/port-knocking-maker-or-generator-icmp-packet-size.html" >Port Knocking Maker or Generator Icmp + Packet Size</a></li><li class="nav-item"><a href="scripts/parse-file-to-add-ppp-secrets.html" >Parse File To Add PPP Secrets</a></li><li class="nav-item"><a href="scripts/print-function.html" >Print Function</a></li><li class="nav-item"><a href="scripts/parent-simple-queue-always-on-top.html" >Parent Simple Queue Always On Top</a></li><li class="nav-item"><a href="scripts/paypal-with-hotspot-and-walled-garden-bypass.html" >Paypal With Hotspot And Walled Garden Bypass</a></li><li class="nav-item"><a href="scripts/ppp-keepalive-ping.html" >PPP Keepalive Ping</a></li><li class="nav-item"><a href="scripts/quick-set-remove-config-to-default-configuration.html" >Quick Set Remove Config to Default Configuration</a></li><li class="nav-item"><a href="scripts/queue-tree-and-e-mailing-stats.html" >Queue Tree And E-Mailing Stats</a></li><li class="nav-item"><a href="scripts/restore-mac-address-to-default-interface.html" >Restore MAC-Address to Default Interface</a></li><li class="nav-item"><a href="scripts/remove-default-simple-queue-from-hotspot.html" >Remove Default Simple Queue From Hotspot</a></li><li class="nav-item"><a href="scripts/routing-failover-with-2-isp-gateway.html" >Routing FailOver with 2 ISP (gateway)</a></li><li class="nav-item"><a href="scripts/routing-failover-with-3-isp-gateway.html" >Routing FailOver with 3 ISP (gateway)</a></li><li class="nav-item"><a href="scripts/reset-mikrotik-via-script-from-terminal.html" >Reset Mikrotik via Script from Terminal</a></li><li class="nav-item"><a href="scripts/remove-or-delete-files-on-mikrotik.html" >Remove or Delete Files On Mikrotik</a></li><li class="nav-item"><a href="scripts/remote-ip-public-static-for-secondary-gateway.html" >Remote IP Public Static For Secondary Gateway</a></li><li class="nav-item"><a href="scripts/read-and-write-large-files.html" >Read and Write Large Files</a></li><li class="nav-item"><a href="scripts/resolve-host-name.html" >Resolve host-name</a></li><li class="nav-item"><a href="scripts/reset-all-counter.html" >Reset All Counter</a></li><li class="nav-item"><a href="scripts/recursive-gateway-fail-over.html" >Recursive Gateway Fail over</a></li><li class="nav-item"><a href="scripts/rebuild-database-on-user-manager.html" >Rebuild DataBase On User Manager</a></li><li class="nav-item"><a href="scripts/reset-database-user-manager.html" >Reset DataBase User Manager</a></li><li class="nav-item"><a href="scripts/routing-via-a-dhcp-allocated-gateway.html" >Routing Via A Dhcp Allocated Gateway</a></li><li class="nav-item"><a href="scripts/reboot-or-restart-mikrotik-from-terminal.html" >Reboot or Restart Mikrotik From Terminal</a></li><li class="nav-item"><a href="scripts/remove-firewall-ip-address-lists-from-script.html" >Remove Firewall IP Address Lists From Script</a></li><li class="nav-item"><a href="scripts/removing-busy-leases-from-dhcp-pool.html" >Removing Busy Leases From Dhcp Pool</a></li><li class="nav-item"><a href="scripts/reboot-boards-due-to-low-memory-with-notification.html" >Reboot Boards due to low Memory with notification</a></li><li class="nav-item"><a href="scripts/script-to-calculate-average-cpu-load.html" >Script to calculate Average CPU Load</a></li><li class="nav-item"><a href="scripts/sending-your-self-an-e-mail-with-dsl-interface-ip-address.html" >Sending Your Self An E-Mail With Dsl Interface Ip Address</a></li><li class="nav-item"><a href="scripts/sending-text-out-over-a-serial-port.html" >Sending Text Out Over A Serial Port</a></li><li class="nav-item"><a href="scripts/script-to-create-directory.html" >Script to Create Directory</a></li><li class="nav-item"><a href="scripts/scheduled-check-for-loaded-interfaces.html" >Scheduled Check For Loaded Interfaces</a></li><li class="nav-item"><a href="scripts/scheduled-wan-disconnect.html" >Scheduled WAN Disconnect</a></li><li class="nav-item"><a href="scripts/setup-and-troubleshooting-routeros-email-function.html" >Setup And Troubleshooting Routeros Email Function</a></li><li class="nav-item"><a href="scripts/super-mario-bross-theme-sound-beep.html" >Super Mario Bross Theme Sound Beep</a></li><li class="nav-item"><a href="scripts/sntp-client-or-ntp-network-time-protocol.html" >SNTP Client or NTP Network Time Protocol</a></li><li class="nav-item"><a href="scripts/solution-for-hotspot-login-page-with-lb-pcc.html" >Solution For Hotspot Login Page with LB PCC</a></li><li class="nav-item"><a href="scripts/signal-org-mangle-and-queue.html" >Signal.org Mangle And Queue</a></li><li class="nav-item"><a href="scripts/speedtest-regexp-layer-7.html" >Speedtest Regexp Layer-7</a></li><li class="nav-item"><a href="scripts/strip-ip-address-without-netmask.html" >Strip IP Address without netmask</a></li><li class="nav-item"><a href="scripts/set-up-wan-lan-wlan-to-get-you-started.html" >Set Up WAN/LAN/WLAN To Get You Started</a></li><li class="nav-item"><a href="scripts/setting-static-dns-record-for-each-dhcp-lease.html" >Setting Static DNS Record For Each DHCP Lease</a></li><li class="nav-item"><a href="scripts/send-email-about-reboot.html" >Send Email About Reboot</a></li><li class="nav-item"><a href="scripts/securing-l2tp-server-for-ipsec.html" >Securing L2TP Server for IPSec</a></li><li class="nav-item"><a href="scripts/sync-address-list-from-dns-lookup-results.html" >Sync Address List from DNS Lookup Results</a></li><li class="nav-item"><a href="scripts/sxt-5hnd-alignment-script.html" >SXT 5HnD Alignment Script</a></li><li class="nav-item"><a href="scripts/sync-address-list-with-dns-cache.html" >Sync Address List with DNS Cache</a></li><li class="nav-item"><a href="scripts/sending-mails-when-battery-low-ups-script.html" >Sending Mails When Battery Low (UPS Script)</a></li><li class="nav-item"><a href="scripts/sending-power-on-notification-to-telegram.html" >Sending Power On Notification To Telegram</a></li><li class="nav-item"><a href="scripts/terminal-command-line-and-keyboard-command.html" >Terminal Command Line and Keyboard Command</a></li><li class="nav-item"><a href="scripts/updating-the-firmware-from-terminal.html" >Updating The Firmware From Terminal</a></li><li class="nav-item"><a href="scripts/use-mikrotik-as-fail2ban-firewall.html" >Use Mikrotik as Fail2ban firewall</a></li><li class="nav-item"><a href="scripts/use-string-as-function.html" >Use String as Function</a></li><li class="nav-item"><a href="scripts/update-static-dns-entries-every-10-minutes.html" >Update Static DNS Entries Every 10 Minutes</a></li><li class="nav-item"><a href="scripts/upnp-multi-wan.html" >UPnP Multi-WAN</a></li><li class="nav-item"><a href="scripts/use-functions-in-cmd-script.html" >Use Functions in CMD Script</a></li><li class="nav-item"><a href="scripts/use-host-names-in-firewall-rules.html" >Use Host Names In Firewall Rules</a></li><li class="nav-item"><a href="scripts/using-scripting-to-overcome-the-inability-to-specify-number-ranges-on-the-command-line.html" >Using Scripting To Overcome The Inability To Specify Number Ranges On The Command Line</a></li><li class="nav-item"><a href="scripts/using-fetch-and-scripting-to-add-ip-address-lists.html" >Using Fetch and Scripting to add IP Address Lists</a></li><li class="nav-item"><a href="scripts/upnp-redirect-the-port-to-mikrotik-device.html" >UPnP: Redirect The Port To Mikrotik Device</a></li><li class="nav-item"><a href="scripts/vidio-com-domain-list.html" >Vidio.com Domain List</a></li><li class="nav-item"><a href="scripts/virus-and-malware-port-blocking.html" >Virus and Malware Port Blocking</a></li><li class="nav-item"><a href="scripts/wms-or-wifi-id-auto-login.html" >WMS or Wifi.id Auto Login</a></li><li class="nav-item"><a href="scripts/write-simple-queue-stats-in-multiple-files.html" >Write simple queue stats in multiple files</a></li><li class="nav-item"><a href="scripts/wake-on-lan-before-connection-to-remote-desktop.html" >Wake On Lan Before Connection To Remote Desktop</a></li><li class="nav-item"><a href="scripts/youtube-restricted-mode-use-dns-static.html" >Youtube Restricted Mode use DNS Static</a></li><li class="nav-item"><a href="scripts/zoom-meeting-mangle-and-queue.html" >Zoom Meeting Mangle and Queue</a></li><li class="nav-item"><a href="scripts/welcome.html" >Welcome</a></li>
+            </ul>
+        </div>
+
+    <div class="main-content">
+        <h1>MikroTik Script Archive Dashboard</h1>
+        <p>Welcome to the offline archive of 290 MikroTik RouterOS scripts. Select a script from the sidebar or the grid below.</p>
+        <p><em>Archived on 2025-11-23</em></p>
+        <div class="dashboard-grid">
+
+            <div class="grid-item">
+                <a href="scripts/anti-hack-protected-bootloader.html">
+                    <h3>Anti Hack Protected BootLoader</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/auto-fix-sntp-and-clock-for-indonesia-timezone.html">
+                    <h3>Auto Fix SNTP and Clock for Indonesia Timezone</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/auto-simple-queue-from-dhcp-server.html">
+                    <h3>Auto Simple Queue From DHCP Server</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/auto-connect-to-internet-with-dhcp-client.html">
+                    <h3>Auto Connect to Internet With DHCP Client</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/auto-repair-passthrough-in-mangle.html">
+                    <h3>Auto Repair Passthrough In Mangle</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/auto-backup-filename-backup-and-send-to-gmail.html">
+                    <h3>Auto Backup Filename.backup and Send To Gmail</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/auto-backup-filename-rsc-and-send-to-gmail.html">
+                    <h3>Auto Backup Filename.rsc and Send To Gmail</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/automated-usage-script-without-user-manager.html">
+                    <h3>Automated Usage Script Without User Manager</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/allow-use-of-ntp-org-pool-service-for-ntp.html">
+                    <h3>Allow Use Of ntp.org Pool Service For NTP</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/auto-upgrade-script-v3-x.html">
+                    <h3>Auto upgrade script V3.x</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/audible-signal-test.html">
+                    <h3>Audible Signal Test</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/a-bit-of-sounds.html">
+                    <h3>A Bit of Sounds</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/add-a-data-limit-to-trial-hotspot-users.html">
+                    <h3>Add a Data Limit To Trial Hotspot Users</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/auto-update-routeros-package-from-script.html">
+                    <h3>Auto Update RouterOS Package From Script</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/arp-table-to-dynamic-simple-queue.html">
+                    <h3>ARP Table To Dynamic Simple Queue</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/add-static-dhcp-leases-to-arp-list.html">
+                    <h3>Add Static DHCP Leases to ARP List</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/alignment-script-that-reads-back-rssi-with-beeps.html">
+                    <h3>Alignment Script that "reads back" RSSI with Beeps</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/bootloader-protector.html">
+                    <h3>Bootloader Protector</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-sites-with-keywords-use-dns-cache.html">
+                    <h3>Block Sites With Keywords Use Dns Cache</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-website-with-keywords-use-dns-static.html">
+                    <h3>Block Website With Keywords Use DNS Static</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/bypass-full-speed-locat-transfer-file.html">
+                    <h3>Bypass Full Speed Locat Transfer File</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/backup-mikrotik-file-backup.html">
+                    <h3>Backup Mikrotik File .Backup</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/backup-export-file-rsc.html">
+                    <h3>Backup Export File .rsc</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/backup-export-file-rsc-hide-sensitive.html">
+                    <h3>Backup Export File .rsc Hide-Sensitive</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/backup-export-file-rsc-compact.html">
+                    <h3>Backup Export File .rsc Compact</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/backup-export-file-rsc-terse.html">
+                    <h3>Backup Export File .rsc Terse</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/backup-export-file-rsc-verbose.html">
+                    <h3>Backup Export File .rsc Verbose</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/backup-export-file-rsc-with-combination.html">
+                    <h3>Backup Export File .rsc With Combination</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/backup-import-file-rsc.html">
+                    <h3>Backup Import File .rsc</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/bypass-local-connection-local-ip.html">
+                    <h3>Bypass Local Connection / Local IP</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/bypass-hotspot-user-with-mac-address.html">
+                    <h3>Bypass Hotspot User With Mac-Address</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/blocking-access-to-specific-websites.html">
+                    <h3>Blocking Access To Specific Websites</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/bittorrent-torrentwws-torrentwww-layer-7.html">
+                    <h3>Bittorrent, Torrentwws, Torrentwww Layer-7</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-windows-update.html">
+                    <h3>Block Windows Update</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-youtube-with-layer-7-or-content-or-tls.html">
+                    <h3>Block Youtube with "Layer 7" or "Content" Or "TLS"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-whatsapp-with-layer-7-or-content-or-tls.html">
+                    <h3>Block Whatsapp with "Layer 7" or "Content" Or "TLS"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-facebook-with-layer-7-or-content-or-tls.html">
+                    <h3>Block Facebook with "Layer 7" or "Content" Or "TLS"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-instagram-with-layer-7-or-content-or-tls.html">
+                    <h3>Block Instagram with "Layer 7" or "Content" Or "TLS"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-twitter-with-layer-7-or-content-or-tls.html">
+                    <h3>Block Twitter with "Layer 7" or "Content" Or "TLS"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-telegram-with-layer-7-or-content-or-tls.html">
+                    <h3>Block Telegram with "Layer 7" or "Content" Or "TLS"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-signal-with-layer-7-or-content-or-tls.html">
+                    <h3>Block Signal with "Layer 7" or "Content" Or "TLS"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-bigo-with-layer-7-or-content-or-tls.html">
+                    <h3>Block Bigo with "Layer 7" or "Content" Or "TLS"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-netflix-with-layer-7-or-content-or-tls.html">
+                    <h3>Block Netflix with "Layer 7" or "Content" Or "TLS"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-iflix-with-layer-7-or-content-or-tls.html">
+                    <h3>Block iflix with "Layer 7" or "Content" Or "TLS"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-tracert-traceroute.html">
+                    <h3>Block Tracert / Traceroute</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-tiktok-firewall-rules-tls.html">
+                    <h3>Block TikTok Firewall Rules "TLS"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-tiktok-firewall-rules-content.html">
+                    <h3>Block TikTok Firewall Rules "Content"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-tiktok-firewall-rules-layer-7.html">
+                    <h3>Block TikTok Firewall Rules "Layer-7"</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/bank-indonesia-domain-list.html">
+                    <h3>Bank Indonesia Domain List</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-mac-address-device.html">
+                    <h3>Block MAC Address Device</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/blocking-modem-access.html">
+                    <h3>Blocking Modem Access</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/backup-graphing-data.html">
+                    <h3>Backup Graphing Data</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/basic-universal-firewall-script.html">
+                    <h3>Basic universal firewall script</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-download-based-download-sizes.html">
+                    <h3>Block Download Based Download Sizes</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/basic-traffic-priorities-rev-3-1.html">
+                    <h3>Basic Traffic Priorities Rev 3.1</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/block-higgs-domino-firewall-tls-method.html">
+                    <h3>Block Higgs Domino Firewall TLS Method</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/backup-full-to-ftp.html">
+                    <h3>Backup Full to FTP</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/change-mac-address-from-terminal.html">
+                    <h3>Change MAC Address From Terminal</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/change-all-queue-type-in-queue-simple.html">
+                    <h3>Change all Queue type in Queue Simple</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/change-all-queue-type-in-queue-tree.html">
+                    <h3>Change all Queue type in Queue Tree</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/checking-for-the-update-new-version.html">
+                    <h3>Checking for the Update New Version</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/clear-log-and-session-user-manager.html">
+                    <h3>Clear Log and Session User Manager</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/custom-limit-bandwidth-hotspot-with-queue-tree.html">
+                    <h3>Custom Limit Bandwidth Hotspot With Queue Tree</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/custom-limit-bandwidth-hotspot-with-queue-simple.html">
+                    <h3>Custom Limit Bandwidth Hotspot With Queue Simple</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/complete-bandwidth-monitoring.html">
+                    <h3>Complete Bandwidth Monitoring</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/create-multiple-queue-tree-at-once.html">
+                    <h3>Create Multiple Queue Tree At Once</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/create-multiple-simple-queue-at-once.html">
+                    <h3>Create Multiple Simple Queue At Once</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/create-hotspot-multi-login-with-bandwidth-limit.html">
+                    <h3>Create Hotspot Multi Login With Bandwidth Limit</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/check-if-rto-and-send-to-telegram.html">
+                    <h3>Check if RTO and send to Telegram</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/change-all-address-list-dynamic-to-static.html">
+                    <h3>Change All Address List Dynamic To Static</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/change-system-note.html">
+                    <h3>Change System Note</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/complete-mangle-speedtest-with-layer-7.html">
+                    <h3>Complete Mangle Speedtest with Layer-7</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/calculates-day-of-the-week-for-a-givien-date.html">
+                    <h3>Calculates Day Of The Week For a Givien Date</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/change-name-interface-or-ether-to-default-auto.html">
+                    <h3>Change Name Interface or Ether To Default Auto</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/change-name-interface-or-ether-to-default-manual.html">
+                    <h3>Change Name Interface or Ether To Default Manual</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/check-if-ip-on-interface-have-changed.html">
+                    <h3>Check if IP on interface have changed</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/check-bandwidth-and-add-limitations.html">
+                    <h3>Check Bandwidth and Add Limitations</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/calculate-with-decimal-numbers.html">
+                    <h3>Calculate With Decimal Numbers</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/clear-log-info-from-terminal.html">
+                    <h3>Clear LOG info from Terminal</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/create-a-file.html">
+                    <h3>Create A File</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/calea-perl-trafr.html">
+                    <h3>Calea Perl Trafr</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/converting-gateway-from-routing-to-hexadecimal.html">
+                    <h3>Converting Gateway From Routing To hexadecimal</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/change-mikrotik-identity-or-winbox-caption.html">
+                    <h3>Change Mikrotik identity or Winbox Caption</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/change-all-queue-type-in-interface-queue.html">
+                    <h3>Change All Queue Type in Interface Queue</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/check-routeros-update-and-notification-to-email-or-telegram.html">
+                    <h3>Check RouterOS Update and Notification to eMail or Telegram</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/create-simple-queue-from-pppoe-secret.html">
+                    <h3>Create Simple QUEUE from PPPoE Secret</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/disable-interface-based-on-volume-of-data.html">
+                    <h3>Disable Interface based on volume of data</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/detect-ip-address-on-vpn-tunnel-if-has-been-changed.html">
+                    <h3>Detect IP Address on VPN Tunnel if has been changed</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dns-static-adblock-for-block-ads.html">
+                    <h3>DNS Static adblock For Block Ads</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dual-wan-dhcp-only-failover.html">
+                    <h3>Dual WAN DHCP-only failover</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dns-over-https-doh.html">
+                    <h3>DNS-over-HTTPS (DoH)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dynamic-dns-on-private-dns-server.html">
+                    <h3>Dynamic DNS on Private DNS Server</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dynamic-dns-update-script-for-changeip-com.html">
+                    <h3>Dynamic DNS Update Script for ChangeIP.com</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dynamic-dns-update-script-for-changeip-behind-nat.html">
+                    <h3>Dynamic DNS Update Script for ChangeIP behind NAT</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dynamic-dns-update-script-for-dnsomatic-com.html">
+                    <h3>Dynamic DNS Update Script for DNSoMatic.com</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dynamic-dns-update-script-for-dnsomatic-com-behind-nat.html">
+                    <h3>Dynamic DNS Update Script for DNSoMatic.com behind NAT</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dynamic-dns-update-script-for-dyndns.html">
+                    <h3>Dynamic DNS Update Script for dynDNS</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dynamic-dns-update-script-for-dyndns-behind-nat.html">
+                    <h3>Dynamic DNS Update Script for dynDNS behind NAT</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dynamic-dns-update-script-for-everydns.html">
+                    <h3>Dynamic DNS Update Script for EveryDNS</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dynamic-dns-update-script-for-hurricane-electric-dns.html">
+                    <h3>Dynamic DNS Update Script for Hurricane Electric DNS</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dynamic-dns-update-script-for-namecheap.html">
+                    <h3>Dynamic DNS Update Script for Namecheap</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dynamic-dns-update-script-for-no-ip-dns.html">
+                    <h3>Dynamic DNS Update Script for No-IP DNS</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/delete-arp-trafic-for-arp-table.html">
+                    <h3>Delete Arp Trafic For Arp Table</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/default-filter-rules.html">
+                    <h3>Default Filter Rules</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dnscrypt-with-opendns-port-443-or-5353.html">
+                    <h3>DNSCRYPT with OpenDNS port 443 or 5353</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dns-cache-flush.html">
+                    <h3>DNS Cache Flush</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/detect-new-log-entry.html">
+                    <h3>Detect New Log Entry</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/dial-pppoe-until-a-certain-ip-range-is-obtained.html">
+                    <h3>Dial PPPoE until a Certain IP Range is Obtained</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/discover-unknown-dhcp-server-on-the-network-telegram.html">
+                    <h3>Discover Unknown DHCP Server On The Network (Telegram)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/extract-the-day-of-the-month.html">
+                    <h3>Extract The Day Of The Month</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/expired-hotspot-page-without-a-proxy.html">
+                    <h3>Expired Hotspot Page Without A Proxy</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/enable-or-disable-new-guest-user-account-daily-hotspot.html">
+                    <h3>Enable or Disable New Guest User Account Daily Hotspot</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/expire-users-hotspot-a-after-number-of-days.html">
+                    <h3>Expire Users Hotspot A After Number Of Days</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/fasttrack-enable.html">
+                    <h3>Fasttrack Enable</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/filter-a-command-output.html">
+                    <h3>Filter A Command Output</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/find-the-day-of-the-week.html">
+                    <h3>Find The Day Of The Week</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/forget-or-show-user-manager-password.html">
+                    <h3>Forget or Show User Manager Password</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/failover-with-netwatch.html">
+                    <h3>Failover with Netwatch</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/failover-with-scripting.html">
+                    <h3>Failover With Scripting</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/force-disconnect-wireless-stations-with-low-ccq.html">
+                    <h3>Force Disconnect Wireless Stations with Low CCQ</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/gps-text-file-converter-to-google-earth-or-maps.html">
+                    <h3>GPS Text File Converter To Google Earth Or Maps</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/google-domain-list-or-all-google-host.html">
+                    <h3>Google Domain List Or All Google Host</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/get-active-vpn-connections-via-e-mail.html">
+                    <h3>Get Active Vpn Connections Via E-Mail</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/google-safe-search-use-dns-static.html">
+                    <h3>Google Safe Search use DNS Static</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/get-today-s-date-info.html">
+                    <h3>Get Today's Date Info</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/generate-backup-and-send-it-by-e-mail.html">
+                    <h3>Generate Backup And Send it By E-Mail</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/get-ip-address-list-netflix-with-raw.html">
+                    <h3>Get IP Address List Netflix With RAW</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/how-to-blocked-meris-botnet.html">
+                    <h3>How To Blocked Meris Botnet</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/how-to-disable-google-ssl-using-static-dns.html">
+                    <h3>How To Disable Google Ssl Using Static Dns</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/host-or-domain-list-speedtest.html">
+                    <h3>Host or Domain list SpeedTest</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/hotspot-auto-logout-user-when-inet-down.html">
+                    <h3>Hotspot Auto logout user When Inet down</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/how-to-change-path-database-user-manager-to-disk-or-usb.html">
+                    <h3>How To Change Path DataBase User Manager to Disk or USB</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/hurricane-electric-ipv6-tunnel-ipv4-endpoint-updater.html">
+                    <h3>Hurricane Electric IPv6 Tunnel - IPv4 Endpoint updater</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/how-to-setting-bonding-interface.html">
+                    <h3>How to Setting Bonding Interface</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-pool-statistics.html">
+                    <h3>IP Pool Statistics</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-for-netflix.html">
+                    <h3>IP Address List for Netflix</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-for-tiktok.html">
+                    <h3>IP Address List for Tiktok</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-for-ggc-google-global-cache.html">
+                    <h3>IP Address List for GGC Google Global Cache</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-nice-rsc-iix-or-ixp.html">
+                    <h3>IP Address List Nice.rsc IIX or IXP</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-aws-ec2-amazon.html">
+                    <h3>IP Address List AWS EC2 Amazon</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-speedtest.html">
+                    <h3>IP Address list SpeedTest</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-telegram.html">
+                    <h3>IP Address list Telegram</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-facebook.html">
+                    <h3>IP Address list Facebook</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-twitter.html">
+                    <h3>IP Address list Twitter</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-whatsapp.html">
+                    <h3>IP Address list WhatsApp</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-zoom-meeting.html">
+                    <h3>IP Address List Zoom Meeting</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-private-or-ip-local-standard-rfc-1918.html">
+                    <h3>IP Private or IP Local Standard RFC 1918</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-indonesia-ipv4.html">
+                    <h3>IP Address List Indonesia IPv4</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ip-address-list-indonesia-ipv6.html">
+                    <h3>IP Address List Indonesia IPv6</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/include-custom-function-in-another-script.html">
+                    <h3>Include custom function in another script</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/initiating-the-update-process-new-version.html">
+                    <h3>Initiating The Update Process New Version</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/improved-netwatch.html">
+                    <h3>Improved Netwatch</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/improved-netwatch-2.html">
+                    <h3>Improved Netwatch 2</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/layer-7-regex-for-all-streaming-video.html">
+                    <h3>Layer-7 Regex For All Streaming Video</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/layer-7-regex-for-all-social-media-socmed.html">
+                    <h3>Layer-7 Regex For All Social Media (Socmed)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/layer-7-regex-for-all-media-extention.html">
+                    <h3>Layer-7 Regex For All Media Extention</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/layer-7-regex-for-all-file-extention.html">
+                    <h3>Layer-7 Regex For All File Extention</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/layer-7-regex-for-telkom-ads.html">
+                    <h3>Layer-7 Regex For Telkom Ads</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/limit-sharing-hotspot-with-change-ttl.html">
+                    <h3>Limit sharing Hotspot with 'Change TTL'</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/lb-pcc-2-line-isp-failover.html">
+                    <h3>LB PCC 2 Line ISP Failover</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/lb-pcc-3-line-isp-failover.html">
+                    <h3>LB PCC 3 Line ISP Failover</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/lb-pcc-4-line-isp-failover.html">
+                    <h3>LB PCC 4 Line ISP Failover</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/lb-pcc-5-line-isp-failover.html">
+                    <h3>LB PCC 5 Line ISP Failover</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/lb-pcc-6-line-isp-failover.html">
+                    <h3>LB PCC 6 Line ISP Failover</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/lb-ecmp-2-line-isp-failover.html">
+                    <h3>LB ECMP 2 Line ISP Failover</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/lb-ecmp-3-line-isp-failover.html">
+                    <h3>LB ECMP 3 Line ISP Failover</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/lb-ecmp-4-line-isp-failover.html">
+                    <h3>LB ECMP 4 Line ISP Failover</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/lb-ecmp-5-line-isp-failover.html">
+                    <h3>LB ECMP 5 Line ISP Failover</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/lb-ecmp-6-line-isp-failover.html">
+                    <h3>LB ECMP 6 Line ISP Failover</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/lb-ecmp-failover-script.html">
+                    <h3>LB ECMP Failover Script</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/log-parser-event-trigger-script.html">
+                    <h3>Log Parser - Event Trigger Script</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/limiting-a-user-to-a-given-amount-of-traffic-using-queues.html">
+                    <h3>Limiting A User To A Given Amount Of Traffic Using Queues</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/limiting-a-user-to-a-given-amount-of-traffic-with-user-levels.html">
+                    <h3>Limiting a User To a Given Amount Of Traffic With User Levels</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/limit-different-bandwidth-in-day-and-night.html">
+                    <h3>Limit Different Bandwidth In Day and Night</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/led-antenna-alignment.html">
+                    <h3>LED Antenna Alignment</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/logging-average-ccq-and-wireless-clients-stats.html">
+                    <h3>Logging Average CCQ and Wireless Clients Stats</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/logging-snr-and-thruput-values.html">
+                    <h3>Logging SNR and Thruput Values</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/make-voip-traffic-a-priority.html">
+                    <h3>Make VOIP traffic a priority</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mikrotik-port-service-api-8728.html">
+                    <h3>Mikrotik Port Service API 8728</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mikrotik-port-service-api-ssl-8729.html">
+                    <h3>Mikrotik Port Service API-SSL 8729</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mikrotik-port-service-ftp-21.html">
+                    <h3>Mikrotik Port Service FTP 21</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mikrotik-port-service-ssh-22.html">
+                    <h3>Mikrotik Port Service SSH 22</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mikrotik-port-service-telnet-23.html">
+                    <h3>Mikrotik Port Service TELNET 23</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mikrotik-port-service-winbox-8291.html">
+                    <h3>Mikrotik Port Service WINBOX 8291</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mikrotik-port-service-www-80-webfig.html">
+                    <h3>Mikrotik Port Service WWW 80 (webfig)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mikrotik-port-service-www-ssl-443-webfig.html">
+                    <h3>Mikrotik Port Service WWW-SSL 443 (webfig)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/monitoring-script.html">
+                    <h3>Monitoring Script</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mangle-and-port-ultraviewer-remote-dekstop.html">
+                    <h3>Mangle and Port UltraViewer (Remote Dekstop)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mangle-and-port-teamviewer-remote-dekstop.html">
+                    <h3>Mangle and Port TeamViewer (Remote Dekstop)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mangle-and-port-anydesk-remote-dekstop.html">
+                    <h3>Mangle and Port AnyDesk (Remote Dekstop)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mangle-and-port-remote-desktop-connection-rdc.html">
+                    <h3>Mangle and Port Remote Desktop Connection (RDC)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mangle-and-port-google-chrome-remote-desktop.html">
+                    <h3>Mangle and Port Google Chrome Remote Desktop</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mangle-and-port-net-monitoring-for-employees-pro.html">
+                    <h3>Mangle and Port Net Monitoring for employees pro</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/mangle-and-port-vnc-virtual-network-computing.html">
+                    <h3>Mangle and Port VNC (Virtual Network Computing</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/make-sure-all-clients-use-router-dns.html">
+                    <h3>Make Sure All Clients Use Router Dns</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/make-an-automated-configuration-and-uninstall.html">
+                    <h3>Make an Automated Configuration and Uninstall</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/monitor-logs-send-email-alert-or-run-script.html">
+                    <h3>Monitor Logs, Send Email Alert Or Run Script</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/no-mark-without-mangle-in-queue-tree.html">
+                    <h3>No-Mark Without Mangle in Queue Tree</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/notification-when-public-ip-address-router-changes.html">
+                    <h3>Notification When Public IP Address Router Changes</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/notification-of-device-connection-to-the-network.html">
+                    <h3>Notification Of Device Connection To The Network</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/netwatch-monitoring-host.html">
+                    <h3>Netwatch Monitoring Host</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/only-1-hotspot-id-can-login-together.html">
+                    <h3>Only 1 Hotspot Id Can Login Together</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-romon-routeros.html">
+                    <h3>Protect RoMON RouterOS</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/print-your-mikrotik-board-type.html">
+                    <h3>Print your Mikrotik board type</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-btest-server.html">
+                    <h3>Protect Btest Server</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-neighbors-discovery.html">
+                    <h3>Protect Neighbors Discovery</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-mac-address-server.html">
+                    <h3>Protect Mac Address Server</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/pppoe-secret-random-username-and-password.html">
+                    <h3>PPPoE Secret Random Username and Password</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/port-forward-for-all-remote-desktop.html">
+                    <h3>Port Forward for All Remote Desktop</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/password-and-username-ont-modem-telkom-indihome.html">
+                    <h3>Password and username ONT Modem Telkom Indihome</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-modem-and-webfig-pages-using-internal-proxy.html">
+                    <h3>Protect Modem And Webfig Pages Using Internal Proxy</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/pseudo-random-number-generator.html">
+                    <h3>Pseudo Random Number Generator</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ping-icmp-to-routing-isp-games.html">
+                    <h3>Ping ICMP To Routing ISP Games</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/port-game-online-for-pc-games.html">
+                    <h3>Port Game Online for PC Games</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/port-game-online-for-mobile-games.html">
+                    <h3>Port Game Online for Mobile Games</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/port-game-online-for-web-games.html">
+                    <h3>Port Game Online for Web Games</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-router-from-port-scanner.html">
+                    <h3>Protect Router from Port Scanner</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-connection-with-anti-netcut.html">
+                    <h3>Protect Connection With ANTI NETCUT</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-open-web-proxy.html">
+                    <h3>Protect Open Web proxy</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-open-recursive-dns.html">
+                    <h3>Protect Open Recursive DNS</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-default-port-service-from-wan.html">
+                    <h3>Protect Default Port Service From WAN</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-router-from-ddos-attacks.html">
+                    <h3>Protect Router From DDOS Attacks</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/protect-router-from-exploit-vulnerability.html">
+                    <h3>Protect Router From Exploit (VULNERABILITY)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/port-knocking-maker-or-generator-icmp-packet-size.html">
+                    <h3>Port Knocking Maker or Generator Icmp + Packet Size</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/parse-file-to-add-ppp-secrets.html">
+                    <h3>Parse File To Add PPP Secrets</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/print-function.html">
+                    <h3>Print Function</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/parent-simple-queue-always-on-top.html">
+                    <h3>Parent Simple Queue Always On Top</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/paypal-with-hotspot-and-walled-garden-bypass.html">
+                    <h3>Paypal With Hotspot And Walled Garden Bypass</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/ppp-keepalive-ping.html">
+                    <h3>PPP Keepalive Ping</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/quick-set-remove-config-to-default-configuration.html">
+                    <h3>Quick Set Remove Config to Default Configuration</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/queue-tree-and-e-mailing-stats.html">
+                    <h3>Queue Tree And E-Mailing Stats</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/restore-mac-address-to-default-interface.html">
+                    <h3>Restore MAC-Address to Default Interface</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/remove-default-simple-queue-from-hotspot.html">
+                    <h3>Remove Default Simple Queue From Hotspot</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/routing-failover-with-2-isp-gateway.html">
+                    <h3>Routing FailOver with 2 ISP (gateway)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/routing-failover-with-3-isp-gateway.html">
+                    <h3>Routing FailOver with 3 ISP (gateway)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/reset-mikrotik-via-script-from-terminal.html">
+                    <h3>Reset Mikrotik via Script from Terminal</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/remove-or-delete-files-on-mikrotik.html">
+                    <h3>Remove or Delete Files On Mikrotik</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/remote-ip-public-static-for-secondary-gateway.html">
+                    <h3>Remote IP Public Static For Secondary Gateway</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/read-and-write-large-files.html">
+                    <h3>Read and Write Large Files</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/resolve-host-name.html">
+                    <h3>Resolve host-name</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/reset-all-counter.html">
+                    <h3>Reset All Counter</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/recursive-gateway-fail-over.html">
+                    <h3>Recursive Gateway Fail over</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/rebuild-database-on-user-manager.html">
+                    <h3>Rebuild DataBase On User Manager</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/reset-database-user-manager.html">
+                    <h3>Reset DataBase User Manager</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/routing-via-a-dhcp-allocated-gateway.html">
+                    <h3>Routing Via A Dhcp Allocated Gateway</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/reboot-or-restart-mikrotik-from-terminal.html">
+                    <h3>Reboot or Restart Mikrotik From Terminal</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/remove-firewall-ip-address-lists-from-script.html">
+                    <h3>Remove Firewall IP Address Lists From Script</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/removing-busy-leases-from-dhcp-pool.html">
+                    <h3>Removing Busy Leases From Dhcp Pool</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/reboot-boards-due-to-low-memory-with-notification.html">
+                    <h3>Reboot Boards due to low Memory with notification</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/script-to-calculate-average-cpu-load.html">
+                    <h3>Script to calculate Average CPU Load</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/sending-your-self-an-e-mail-with-dsl-interface-ip-address.html">
+                    <h3>Sending Your Self An E-Mail With Dsl Interface Ip Address</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/sending-text-out-over-a-serial-port.html">
+                    <h3>Sending Text Out Over A Serial Port</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/script-to-create-directory.html">
+                    <h3>Script to Create Directory</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/scheduled-check-for-loaded-interfaces.html">
+                    <h3>Scheduled Check For Loaded Interfaces</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/scheduled-wan-disconnect.html">
+                    <h3>Scheduled WAN Disconnect</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/setup-and-troubleshooting-routeros-email-function.html">
+                    <h3>Setup And Troubleshooting Routeros Email Function</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/super-mario-bross-theme-sound-beep.html">
+                    <h3>Super Mario Bross Theme Sound Beep</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/sntp-client-or-ntp-network-time-protocol.html">
+                    <h3>SNTP Client or NTP Network Time Protocol</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/solution-for-hotspot-login-page-with-lb-pcc.html">
+                    <h3>Solution For Hotspot Login Page with LB PCC</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/signal-org-mangle-and-queue.html">
+                    <h3>Signal.org Mangle And Queue</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/speedtest-regexp-layer-7.html">
+                    <h3>Speedtest Regexp Layer-7</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/strip-ip-address-without-netmask.html">
+                    <h3>Strip IP Address without netmask</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/set-up-wan-lan-wlan-to-get-you-started.html">
+                    <h3>Set Up WAN/LAN/WLAN To Get You Started</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/setting-static-dns-record-for-each-dhcp-lease.html">
+                    <h3>Setting Static DNS Record For Each DHCP Lease</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/send-email-about-reboot.html">
+                    <h3>Send Email About Reboot</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/securing-l2tp-server-for-ipsec.html">
+                    <h3>Securing L2TP Server for IPSec</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/sync-address-list-from-dns-lookup-results.html">
+                    <h3>Sync Address List from DNS Lookup Results</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/sxt-5hnd-alignment-script.html">
+                    <h3>SXT 5HnD Alignment Script</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/sync-address-list-with-dns-cache.html">
+                    <h3>Sync Address List with DNS Cache</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/sending-mails-when-battery-low-ups-script.html">
+                    <h3>Sending Mails When Battery Low (UPS Script)</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/sending-power-on-notification-to-telegram.html">
+                    <h3>Sending Power On Notification To Telegram</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/terminal-command-line-and-keyboard-command.html">
+                    <h3>Terminal Command Line and Keyboard Command</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/updating-the-firmware-from-terminal.html">
+                    <h3>Updating The Firmware From Terminal</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/use-mikrotik-as-fail2ban-firewall.html">
+                    <h3>Use Mikrotik as Fail2ban firewall</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/use-string-as-function.html">
+                    <h3>Use String as Function</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/update-static-dns-entries-every-10-minutes.html">
+                    <h3>Update Static DNS Entries Every 10 Minutes</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/upnp-multi-wan.html">
+                    <h3>UPnP Multi-WAN</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/use-functions-in-cmd-script.html">
+                    <h3>Use Functions in CMD Script</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/use-host-names-in-firewall-rules.html">
+                    <h3>Use Host Names In Firewall Rules</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/using-scripting-to-overcome-the-inability-to-specify-number-ranges-on-the-command-line.html">
+                    <h3>Using Scripting To Overcome The Inability To Specify Number Ranges On The Command Line</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/using-fetch-and-scripting-to-add-ip-address-lists.html">
+                    <h3>Using Fetch and Scripting to add IP Address Lists</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/upnp-redirect-the-port-to-mikrotik-device.html">
+                    <h3>UPnP: Redirect The Port To Mikrotik Device</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/vidio-com-domain-list.html">
+                    <h3>Vidio.com Domain List</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/virus-and-malware-port-blocking.html">
+                    <h3>Virus and Malware Port Blocking</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/wms-or-wifi-id-auto-login.html">
+                    <h3>WMS or Wifi.id Auto Login</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/write-simple-queue-stats-in-multiple-files.html">
+                    <h3>Write simple queue stats in multiple files</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/wake-on-lan-before-connection-to-remote-desktop.html">
+                    <h3>Wake On Lan Before Connection To Remote Desktop</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/youtube-restricted-mode-use-dns-static.html">
+                    <h3>Youtube Restricted Mode use DNS Static</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/zoom-meeting-mangle-and-queue.html">
+                    <h3>Zoom Meeting Mangle and Queue</h3>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <a href="scripts/welcome.html">
+                    <h3>Welcome</h3>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>
